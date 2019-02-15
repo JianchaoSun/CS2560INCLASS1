@@ -4,60 +4,67 @@
  *  Created on: Jan 29, 2019
  *      Author: jianchaosun
  */
-#include <stdio.h>
 
 
 
-int main () {
+//IF, ELSE IF, ELSE - Decision Making
 
- 
 
-   /* local variable definition */
-
-   char grade = 'B';
+#include<stdio.h>
 
  
 
-   switch(grade) {
+// Global variables
 
-      case 'A' :
+int A;
 
-         printf("Excellent!\n" );
+int B;
 
-         break;
+ 
 
-      case 'B' :
+int fun()
 
-      case 'C' :
+{
 
-         printf("Well done\n" );
+  static int count = 0; //Static Variable
 
-         break;
+  count++;
 
-      case 'D' :
-
-         printf("You passed\n" );
-
-         break;
-
-      case 'F' :
-
-         printf("Better try again\n" );
-
-         break;
-
-      default :
-
-         printf("Invalid grade\n" );
-
-   }
-
-
-
-   printf("Your grade is  %c\n", grade );
-
-
-
-   return 0;
+  return count;
 
 }
+
+
+
+int Add()
+
+{
+
+    return A + B;
+
+}
+
+ 
+
+int main()
+
+{
+
+    int answer; // Local variable
+
+    A = 5;
+
+    B = 7;
+
+    answer = Add();
+
+    printf("%d\n",answer);
+
+    printf("%d ", fun());
+
+    printf("%d ", fun());
+
+    return 0;
+
+}
+
