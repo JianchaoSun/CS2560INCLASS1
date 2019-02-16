@@ -6,65 +6,24 @@
  */
 
 
+#include <stdio.h>
 
-//IF, ELSE IF, ELSE - Decision Making
-
-
-#include<stdio.h>
-
+int main () {
  
+   int n[ 10 ]; /* n is an array of 10 integers */
+   int i,j;
 
-// Global variables
+   /* initialize elements of array n to 0 */
+   for ( i = 0; i < 10; i++ ) {
+      n[ i ] = i + 100; /* set element at location i to i + 100 */
+   }
 
-int A;
+   /* output each array element's value */
+   for (j = 0; j < 10; j++ ) {
+      printf("Element[%d] = %d\n", j, n[j] );
+   }
 
-int B;
-
+   return 0;
+}
  
-
-int fun()
-
-{
-
-  static int count = 0; //Static Variable
-
-  count++;
-
-  return count;
-
-}
-
-
-
-int Add()
-
-{
-
-    return A + B;
-
-}
-
- 
-
-int main()
-
-{
-
-    int answer; // Local variable
-
-    A = 5;
-
-    B = 7;
-
-    answer = Add();
-
-    printf("%d\n",answer);
-
-    printf("%d ", fun());
-
-    printf("%d ", fun());
-
-    return 0;
-
-}
-
+/**********************************************/
