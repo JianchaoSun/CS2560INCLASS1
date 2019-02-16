@@ -5,18 +5,17 @@
  *      Author: jianchaosun
  */
 
+
+//CREATE AND WRITE TO FILE
 #include <stdio.h>
-int main( ) {
  
-   char str[100];
-   int i;
+int main() {
+   FILE *fp;        //pointer to a file type
  
-   printf( "Enter a value :");
-   fflush(stdout);  //ECLIPSE BUG
-   scanf("%s %d", str, &i);
- 
-   printf( "\nYou entered: %s %d ", str, i);
- 
+   fp = fopen("textFile.txt", "w+");
+   fprintf(fp, "This is testing for fprintf...\n");
+   fputs("This is testing for fputs...\n", fp);
+   fclose(fp);
    return 0;
 }
  
