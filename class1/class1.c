@@ -5,19 +5,22 @@
  *      Author: jianchaosun
  */
 
-
-//CREATE AND WRITE TO FILE
 #include <stdio.h>
  
-int main() {
-   FILE *fp;        //pointer to a file type
+void main() {
  
-   fp = fopen("textFile.txt", "w+");
-   fprintf(fp, "This is testing for fprintf...\n");
-   fputs("This is testing for fputs...\n", fp);
+   FILE *fp;
+   char buff[255];
+ 
+   fp = fopen("textFile.txt", "r");
+   fscanf(fp, "%s", buff);
+   printf("1 : %s\n", buff );
+ 
+   fgets(buff, 255, (FILE*)fp);
+   printf("2: %s\n", buff );
+ 
+   fgets(buff, 255, (FILE*)fp);
+   printf("3: %s\n", buff );
    fclose(fp);
-   return 0;
-}
  
-
-
+}
