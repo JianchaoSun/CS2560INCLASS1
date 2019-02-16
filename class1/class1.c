@@ -5,29 +5,28 @@
  *      Author: jianchaosun
  */
 
-//another example
+
 #include <stdio.h>
-#include <string.h>
-
-union Data {
-   int i;
-   float f;
-   char str[20];
-};
-
-int main( ) {
  
-   union Data data;
- 
-   data.i = 10;
-   printf( "data.i : %d\n", data.i);
-
-   data.f = 220.5;
-   printf( "data.f : %f\n", data.f);
-
-   strcpy( data.str, "C Programming");
-   printf( "data.str : %s\n", data.str);
- 
-   return 0;
+void swap(int *x, int *y)  //defining function called swap
+{
+    int z = *x;
+    *x = *y;
+    *y = z;
 }
+ 
+ 
+int main()
+{
+    int a = 45, b = 35;
+    printf("Before Swap\n");
+    printf("a = %d b = %d\n",a,b);
+ 
+    swap(&a, &b);
+ 
+    printf("After Swap with pass by reference\n");
+    printf("a = %d b = %d\n",a,b);
+    return 0;
+}
+ 
 
