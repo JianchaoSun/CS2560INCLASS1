@@ -5,22 +5,20 @@
  *      Author: jianchaosun
  */
 
-
 #include <stdio.h>
 int main( ) {
  
-   char str[100];       //char array STRING used as buffer
+   char str[100];
+   int i;
  
    printf( "Enter a value :");
    fflush(stdout);  //ECLIPSE BUG
-   gets( str );
+   scanf("%s %d", str, &i);
  
-   printf( "\nYou entered: ");
-   puts( str );
+   printf( "\nYou entered: %s %d ", str, i);
  
    return 0;
 }
- 
  
 
 
