@@ -6,27 +6,21 @@
  */
 
 
-#include <stdio.h>
+#include <stdio.h>  //standard input output built into c library
  
-void swap(int *x, int *y)  //defining function called swap
-{
-    int z = *x;
-    *x = *y;
-    *y = z;
-}
+typedef int number;
  
+ int main() {
  
-int main()
-{
-    int a = 45, b = 35;
-    printf("Before Swap\n");
-    printf("a = %d b = %d\n",a,b);
+   number c;
+   printf( "Enter a value :");
+   fflush(stdout);  //ECLIPSE BUG
+   c = getchar( );
  
-    swap(&a, &b);
+   printf( "\nYou entered: ");
+   putchar( c );
  
-    printf("After Swap with pass by reference\n");
-    printf("a = %d b = %d\n",a,b);
-    return 0;
+   return 0;
 }
  
 
